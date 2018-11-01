@@ -22,16 +22,17 @@ var suiveur = function suiveur() {
         x = posX;
         y = posY;
     } else {
-        dx = (posX - x) * 0.125;
-        dy = (posY - y) * 0.125;
+        dx = (posX - x) * 0.1;
+        dy = (posY - y) * 0.1;
         if (Math.abs(dx) + Math.abs(dy) < 0.1) {
             x = posX;
             y = posY;
         } else {
             x += dx;
-            y = dy;
+            y += dy;
         }
     }
     ball.style.left = x +"px";
     ball.style.top = y + "px";
+
 };
