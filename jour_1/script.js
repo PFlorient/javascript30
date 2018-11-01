@@ -51,4 +51,9 @@ $on('click', function(e){
     setTimeout(function(){
         ball.style.width = "50px";
         ball.style.height = "50px"; },1100);
-})
+});
+
+//Fin
+//By Roku
+//01/11/11
+ 
