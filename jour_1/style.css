@@ -21,7 +21,8 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin: -10px 0 0 -10px;
+    transform: translateY(-50%) translateX(-50%);
+    transition: 0.2s;
     pointer-events: none;
 }
 
