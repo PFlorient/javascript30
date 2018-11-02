@@ -12,32 +12,35 @@
 <body>
     <div class="container">
         <div class="calculette">
-            <form name="form"><input class="textview" ></form>
+            <form name="form"><input class="textview" name="textview" ></form>
         <table>
             <tr>
-                <td><input type="button" value="C"></td>
-                <td><input type="button" value="<"></td>
-                <td><input type="button" value="/"></td>
-                <td><input type="button" value="X"></td>
+                <td><input type="button" id="C" value="C" onclick="c()"></td>
+                <td><input type="button" id="supp" value="<" onclick="bach()" ></td>
+                <td><input type="button" id="divise" value="/" onclick="ajout('/')"></td>
+                <td><input type="button" id="multiple" value="X" onclick="ajout('*')"></td>
             </tr>
             <tr>
-                <td><input type="button" value="7"></td>
-                <td><input type="button" value="8"></td>
-                <td><input type="button" value="9"></td>
-                <td><input type="button" value="-"></td>
+                <td><input type="button" id="7" value="7" onclick="ajout(7)"></td>
+                <td><input type="button" id="8" value="8" onclick="ajout(8)"></td>
+                <td><input type="button" id="9" value="9" onclick="ajout(9)"></td>
+                <td><input type="button" id="moins" value="-" onclick="ajout('-')"></td>
             </tr>
             <tr>
-                <td><input type="button" value="4"></td>
-                <td><input type="button" value="5"></td>
-                <td><input type="button" value="6"></td>
-                <td><input type="button" value="+"></td>
+                <td><input type="button" id="4" value="4" onclick="ajout(4)"></td>
+                <td><input type="button" id="5" value="5" onclick="ajout(5)"></td>
+                <td><input type="button" id="6" value="6" onclick="ajout(6)"></td>
+                <td><input type="button" id="plus" value="+" onclick="ajout('+')"></td>
             </tr>
             <tr>
-                <td><input type="button" value="1"></td>
-                <td><input type="button" value="2"></td>
-                <td><input type="button" value="3"></td>
-                <td><input type="button" value="="></td>
+                <td><input type="button" id="1" value="1" onclick="ajout(1)"></td>
+                <td><input type="button" id="2" value="2" onclick="ajout(2)"></td>
+                <td><input type="button" id="3" value="3" onclick="ajout(3)"></td>
+                <td><input type="button" id="equals" value="=" onclick="equal()"></td>
             </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="3" value="0" onclick="ajout(0)"></td>
+                <td colspan="2"><input type="button" id="equals" value="." onclick="ajout('.')"></td></tr>
         </table>
         </div>
 
