@@ -22,5 +22,7 @@ function equal() {
         document.form.textview.value = eval(document.form.textview.value);
     }
 }
-
-//parseFloat(e.value);
+ //Fin
+//By Roku
+//02/11/11
+ 
