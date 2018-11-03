@@ -7,11 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Font-tester</title>
+    
 </head>
 
 <body>
-
-    <script src="./script.js"></script>
+    <div class="container">
+        <div class="transformeur">
+            <textarea name="vanillatext" placeholder="Insert text here" id="vanillatext"></textarea>
+            <input type="text" name="" value="" id="fonts_list">
+            <input type="button" value="test" id="transform" onclick="transform();">
+            <textarea  name="changedtext" id="changedtext"> </textarea></div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js">    </script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Any Google Font']
+    }
+  });
+</script>
 </body>
 
 </html>
