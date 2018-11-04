@@ -1,12 +1,12 @@
 var recuptext;
 var enter = document.getElementById("bar");
-/*
+
 enter.addEventListener("keydown", function (e) {
-    if (e.keycode === 13) {
-        alert("ok");
-        addmsg();
+    if (e.keyCode === 13) {
+       addmsg();
     }
-});*/
+});
+
 
 function addmsg() {
     recuptext = document.getElementById("bar").value;
