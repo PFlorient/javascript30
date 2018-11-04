@@ -44,11 +44,28 @@ ul {
     margin-top: 20px;
     width: 100%;
     list-style-type: none;
-    background: deeppink;
-position:absolute;
+    position: absolute;
+    background: white;
 }
 
 li {
+    background: #f9f9f9;
     width: 100%;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 0px;
+    text-align: center;
+    transition: 0.25s;
+}
+li:nth-child(odd){
+    background: #ecf0f1;
+}
+li:first-child{border: none;}
+
+li:hover{
+    background: #95a5a6;
+}
+
+.isok{
+    text-decoration: line-through;
+    background: #7f8c8d;
 }
