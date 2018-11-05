@@ -1,0 +1,1 @@
+var pokedex = 'https://github.com/gnufred/pgmicrotypedex/blob/master/pgdex.json';

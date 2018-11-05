@@ -33,7 +33,7 @@ function clearall() {
    
     var listli = document.getElementsByTagName("li").length;
     var i;
-    for( i =0; i<listli;i++){
+    for( i = 0; i<=  listli;i++){
         ul.removeChild(ul.childNodes[i]);
     }
 }
