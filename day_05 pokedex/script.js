@@ -35,3 +35,7 @@ function afficherPokemon() {
 
 search.addEventListener('change', afficherPokemon);
 search.addEventListener('keyup', afficherPokemon);
+
+//Fin
+//By Roku
+//05/11/11
