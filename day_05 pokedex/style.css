@@ -14,20 +14,77 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+img {
+    width: 100px;
+    height: 100px;
+    ;
+}
+
 .lepokedex {
     width: 33%;
+    margin: auto;
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
-    transform: translateX(-50%) translateY(-25%);
+    transform: translateX(-50%) translateY(-30%);
     text-align: center;
 }
 
 #search {
-    border: none;
-    offset: 0;
-    width: 100%;
+    width: 75%;
     height: 25px;
-    border-radius: 5px;
-    font-size: 18px;text-align: center;
+    border-radius: 25px;
+    text-align: center;
+    border: 0;
+}
+
+ul {
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+    list-style-type: none;
+    position: absolute;
+
+}
+
+li {
+    background: #d9d9d9;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px 0px 0px;
+    text-align: left;
+    transition: 0.25s;
+    height: 125px;
+    border-radius: 25px;
+    margin: 5px auto;
+    display: inline-block
+}
+
+li:nth-child(odd) {
+    background: #ecf0f1;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+span {
+    vertical-align: middle;
+    line-height: 20px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+span:first-child {
+    padding-left: 11%;
+}
+
+.englobe {
+    width: 90%;
+    margin: auto;
+}
+span:last-child{
+    margin-top: 7.5%;
+    text-align: right;
 }
