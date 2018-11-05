@@ -19,15 +19,17 @@ function trouverPokemon(motentre, pokemons) {
 
 
 function afficherPokemon() {
+    if (search.value !="") {
     var trouve = trouverPokemon(this.value, name);
     var li = trouve.map(pokemons => {
-        return ` <li class="liste"> <div class="englobe"> <span class="numero"> ${pokemons.num} </span>  <img src="${pokemons.img}">
-        <span> ${pokemons.name}</span>
-        <span> Type : ${ pokemons.type} <span></div>
+        return ` <li class="liste">  <span class="numero"> ${pokemons.num} </span> <span> ${pokemons.name} </span>  <img src="${pokemons.img}">
+        
+        <span> Type(s) : ${ pokemons.type} </span> <span>|weakness(es) : ${pokemons.weaknesses}</span>
         </li>`
     }).join('');
-    if (search.value !="") {
         ul.innerHTML = li;
+    }else{
+        ul.innerHTML = '';
     }
 }
 
