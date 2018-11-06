@@ -8,24 +8,44 @@ img.onload = function () {
     ctx.drawImage(img, 0, 0, window.innerWidth, window.innerHeight);
 }
 
+img.src = 'img/japan.jpg'
+
 function changement() {
+
 
     let blur = document.getElementById('rangeb').value;
     let grayscale = document.getElementById('rangeg').value;
-    let opacity = document.getElementById('rangeg').value;
-    let brightness = document.getElementById('rangeg').value;
-    let saturate = document.getElementById('rangeg').value;
-    let sepia = document.getElementById('rangeg').value;
-    //let grayscale = document.getElementById('rangeg').value;
+    let opacity = document.getElementById('rangeo').value;
+    let brightness = document.getElementById('rangebr').value;
+    let saturate = document.getElementById('rangesa').value;
+    let sepia = document.getElementById('ranges').value;
     if (blur == 'undifined') {
         blur = 0;
     }
     if (grayscale == 'undifined') {
         grayscale = 0;
     }
-    canvas.style.filter = "grayscale(" + grayscale + "%) " + " blur(" + blur + "px) ";
+    if (opacity == 'undifined') {
+        opacity = 1;
+    }
+    if (brightness == 'undifined') {
+        brightness = 100;
+    }
+    if (saturate == 'undifined') {
+        saturate = 100;
+    }
+    if (sepia == 'undifined') {
+        sepia = 0;
+    }
+
+    canvas.style.filter = "blur(" + blur + "px) " +
+        "grayscale(" + grayscale + "%) " +
+        " opacity(" + opacity + ") " +
+        " brightness(" + brightness + "%) " +
+        " saturate(" + saturate + "%) " +
+        " sepia(" + sepia + "%) ";
 }
 
-
-
-img.src = 'img/japan.jpg'
+function clear() {
+    changement;
+}
