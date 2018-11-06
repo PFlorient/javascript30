@@ -24,11 +24,37 @@
 canvas{
     width: 800px;
     height: 600px;
-    border: solid black 1px;
     background: white;
     display: block;
     position: absolute; 
     top: 50%;
     margin: auto;
     transform: translateY(-50%);
+}
+.range{
+    -webkit-appearance: none;
+    width: 75%;
+    height: 10px;
+    border-radius: 5px;   
+    background: #f3f3f3;
+    outline: none;
+    margin: 20px auto;   
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+    background: deeppink;
+    cursor: pointer;
+}
+
+.range::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
 }

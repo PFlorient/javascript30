@@ -11,7 +11,25 @@
 
 <body>
     <div class="container">
-        <div class="left">salut</div>
+        <div class="left">
+            <h1>Blur :</h1>
+            <input type="range" list="tickmarks" id="rangeb" value="0" class="range" step="5" min="0" max="50" oninput="changement();">
+           
+            <h1>Grayscale :</h1>
+            <input type="range" list="tickmarks" id="rangeg" value="0" class="range" step="5" min="0" max="100" oninput="changement();">
+            <h1>Opacity :</h1>
+            <input type="range" list="tickmarks" id="rangeo" value="0" class="range" step="5" min="0" max="100" oninput="changement();">
+            <h1>Brightness :</h1>
+            <input type="range" list="tickmarks" id="rangebr" value="0" class="range" step="5" min="0" max="100" oninput="changement();">
+            <h1>Saturate :</h1>
+            <input type="range" list="tickmarks" id="rangesa" value="0" class="range" step="5" min="0" max="100" oninput="changement();">
+            <h1>Sepia :</h1>
+            <input type="range" list="tickmarks" id="ranges" value="0" class="range" step="5" min="0" max="100" oninput="changement();">
+     
+
+
+
+        </div>
         <div class="right"><canvas id="viewport"></canvas></div>
     </div>
 
