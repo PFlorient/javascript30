@@ -45,7 +45,6 @@ function changement() {
         " saturate(" + saturate + "%) " +
         " sepia(" + sepia + "%) ";
 }
-
-function clear() {
-    changement;
-}
+//Fin
+//By Roku
+//06/11/11
