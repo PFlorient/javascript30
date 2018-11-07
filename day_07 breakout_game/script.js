@@ -52,13 +52,20 @@ function moveball() {
     if (x + dx > canvas.width - 10 || x + dx < 0) {
         dx = -dx;
     }
-    if (y + dy > canvas.height - 10 || y + dy < 0) {
+    if (y + dy < 10) {
         dy = -dy
+    } else if (y + dy > canvas.height - 10) {
+        if (x > posx && x < posx + 200) {
+            dy = -dy;
+        } else {
+            alert('game over');
+            document.location.reload()
+        }
     }
     if (gauche && posx > 0) {
         posx -= 7
     }
-    
+
     if (droite && posx < canvas.width - 200) {
         posx += 7
     }
@@ -92,5 +99,3 @@ document.addEventListener('keydown', appuye);
 document.addEventListener('keyup', desapuye);
 
 setInterval(moveball, 10);
-
-/*------------------Game Over----------------*/
