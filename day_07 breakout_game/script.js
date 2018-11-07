@@ -7,7 +7,13 @@ var dy = -2;
 var posx = 300;
 var gauche = false;
 var droite = false;
-
+var briqueRowCount = 3;
+var briqueColumnCount = 5;
+var briqueWidth = 140;
+var briqueHeight = 50;
+var briquePadding = 10;
+var briqueOffsetTop = 30;
+var briqueOffsetLeft = 30;
 //Le cercle
 function cercle() {
     ctx.beginPath();
@@ -26,27 +32,41 @@ function tapeur() {
     ctx.fill();
     ctx.closePath();
 }
-/*
-// Briques
-for (var i = 0; i <= 3; i++) {
-    for (var j = 0; j <= 6; j++) {
-        var top;
-        top = 50;
-        ctx.beginPath();
-        ctx.rect(300, top, 120, 30);
-        ctx.fillStyle = "#22A7F0";
-        ctx.fill();
-        ctx.closePath();
 
+// Briques
+var briques = [];
+for(var c=0; c<briqueColumnCount; c++) {
+    briques[c] = [];
+    for(var r=0; r<briqueRowCount; r++) {
+        briques[c][r] = { x: 0, y: 0 };
     }
 }
-*/
+function lesbriques() {
+    for(var c=0; c<briqueColumnCount; c++) {
+        for(var r=0; r<briqueRowCount; r++) {
+            var briqueX = (c*(briqueWidth+briquePadding))+briqueOffsetLeft;
+            var briqueY = (r*(briqueHeight+briquePadding))+briqueOffsetTop;
+            briques[c][r].x = briqueX;
+            briques[c][r].y = briqueY;
+            ctx.beginPath();
+            ctx.rect(briqueX, briqueY, briqueWidth, briqueHeight);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+}
+
+
 /*---------------Déplacement-------------*/
 //bouger ball
 function moveball() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     cercle();
     tapeur();
+    /*creation briques*/
+   lesbriques();
+    ///////////////////
     x += dx;
     y += dy;
     if (x + dx > canvas.width - 10 || x + dx < 0) {
