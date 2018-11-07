@@ -1,7 +1,7 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var x = canvas.width / 2;
-var y = canvas.height - 30;
+var y = canvas.height - 20;
 var dx = 2;
 var dy = -2;
 var posx = 300;
@@ -14,6 +14,7 @@ var briqueHeight = 50;
 var briquePadding = 10;
 var briqueOffsetTop = 30;
 var briqueOffsetLeft = 30;
+var 
 //Le cercle
 function cercle() {
     ctx.beginPath();
@@ -35,24 +36,31 @@ function tapeur() {
 
 // Briques
 var briques = [];
-for(var c=0; c<briqueColumnCount; c++) {
+for (var c = 0; c < briqueColumnCount; c++) {
     briques[c] = [];
-    for(var r=0; r<briqueRowCount; r++) {
-        briques[c][r] = { x: 0, y: 0 };
+    for (var r = 0; r < briqueRowCount; r++) {
+        briques[c][r] = {
+            x: 0,
+            y: 0,
+            status: 1
+        };
     }
 }
+
 function lesbriques() {
-    for(var c=0; c<briqueColumnCount; c++) {
-        for(var r=0; r<briqueRowCount; r++) {
-            var briqueX = (c*(briqueWidth+briquePadding))+briqueOffsetLeft;
-            var briqueY = (r*(briqueHeight+briquePadding))+briqueOffsetTop;
-            briques[c][r].x = briqueX;
-            briques[c][r].y = briqueY;
-            ctx.beginPath();
-            ctx.rect(briqueX, briqueY, briqueWidth, briqueHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
+    for (var c = 0; c < briqueColumnCount; c++) {
+        for (var r = 0; r < briqueRowCount; r++) {
+            if (briques[c][r].status == 1) {
+                var briqueX = (c * (briqueWidth + briquePadding)) + briqueOffsetLeft;
+                var briqueY = (r * (briqueHeight + briquePadding)) + briqueOffsetTop;
+                briques[c][r].x = briqueX;
+                briques[c][r].y = briqueY;
+                ctx.beginPath();
+                ctx.rect(briqueX, briqueY, briqueWidth, briqueHeight);
+                ctx.fillStyle = "#0095DD";
+                ctx.fill();
+                ctx.closePath();
+            }
         }
     }
 }
@@ -65,8 +73,9 @@ function moveball() {
     cercle();
     tapeur();
     /*creation briques*/
-   lesbriques();
+    lesbriques();
     ///////////////////
+    collision()
     x += dx;
     y += dy;
     if (x + dx > canvas.width - 10 || x + dx < 0) {
@@ -111,6 +120,20 @@ function desapuye(e) {
     }
     if (e.keyCode == 39) {
         droite = false;
+    }
+}
+/*-------------Colision--------------*/
+function collision() {
+    for (var c = 0; c < briqueColumnCount; c++) {
+        for (var r = 0; r < briqueRowCount; r++) {
+            var b = briques[c][r];
+            if (b.status == 1) {
+                if (x > b.x && x < b.x + briqueWidth && y > b.y && y < b.y + briqueHeight) {
+                    dy = -dy;
+                    b.status = 0;
+                }
+            }
+        }
     }
 }
 
