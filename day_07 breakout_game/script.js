@@ -14,7 +14,7 @@ var briqueHeight = 50;
 var briquePadding = 10;
 var briqueOffsetTop = 30;
 var briqueOffsetLeft = 30;
-var 
+var tapeurwidth= 200
 //Le cercle
 function cercle() {
     ctx.beginPath();
@@ -28,10 +28,11 @@ function cercle() {
 //Le tapeur
 function tapeur() {
     ctx.beginPath();
-    ctx.rect(posx, 790, 200, 10);
+    ctx.rect(posx, 790, tapeurwidth, 10);
     ctx.fillStyle = "#22A7F0";
     ctx.fill();
     ctx.closePath();
+
 }
 
 // Briques
@@ -84,8 +85,11 @@ function moveball() {
     if (y + dy < 10) {
         dy = -dy
     } else if (y + dy > canvas.height - 10) {
-        if (x > posx && x < posx + 200) {
+        if (x > posx && x < posx + tapeurwidth) {
             dy = -dy;
+            if(tapeurwidth>80){
+                tapeurwidth-=5;
+            }
         } else {
             alert('game over');
             document.location.reload()
@@ -95,15 +99,11 @@ function moveball() {
         posx -= 7
     }
 
-    if (droite && posx < canvas.width - 200) {
+    if (droite && posx < canvas.width - tapeurwidth) {
         posx += 7
     }
 }
 
-function movetapeur() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    tapeur();
-}
 
 function appuye(e) {
     if (e.keyCode == 37) {
