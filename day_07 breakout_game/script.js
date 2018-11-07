@@ -1,11 +1,12 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-var x = canvas.width / 3;
-var y = canvas.height - 15;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
 var dx = 2;
 var dy = -2;
+var posx = 300;
 var gauche = false;
-var droite =  false;
+var droite = false;
 
 //Le cercle
 function cercle() {
@@ -20,7 +21,7 @@ function cercle() {
 //Le tapeur
 function tapeur() {
     ctx.beginPath();
-    ctx.rect(300, 790, 200, 10);
+    ctx.rect(posx, 790, 200, 10);
     ctx.fillStyle = "#22A7F0";
     ctx.fill();
     ctx.closePath();
@@ -40,12 +41,12 @@ for (var i = 0; i <= 3; i++) {
     }
 }
 */
-
+/*---------------Déplacement-------------*/
 //bouger ball
 function moveball() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    cercle()
-   
+    cercle();
+    tapeur();
     x += dx;
     y += dy;
     if (x + dx > canvas.width - 10 || x + dx < 0) {
@@ -54,6 +55,13 @@ function moveball() {
     if (y + dy > canvas.height - 10 || y + dy < 0) {
         dy = -dy
     }
+    if (gauche && posx > 0) {
+        posx -= 7
+    }
+    
+    if (droite && posx < canvas.width - 200) {
+        posx += 7
+    }
 }
 
 function movetapeur() {
@@ -61,5 +69,28 @@ function movetapeur() {
     tapeur();
 }
 
+function appuye(e) {
+    if (e.keyCode == 37) {
+        gauche = true;
+    }
+    if (e.keyCode == 39) {
+        droite = true;
+    }
+}
+
+function desapuye(e) {
+    if (e.keyCode == 37) {
+        gauche = false;
+    }
+    if (e.keyCode == 39) {
+        droite = false;
+    }
+}
+
+
+document.addEventListener('keydown', appuye);
+document.addEventListener('keyup', desapuye);
 
 setInterval(moveball, 10);
+
+/*------------------Game Over----------------*/
