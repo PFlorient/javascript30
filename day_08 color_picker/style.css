@@ -20,6 +20,7 @@
     width: 20%;
     height: 200px;
 }
+
 /*Noir*/
 .darken {
     background-color: #1d1d1d;
@@ -36,29 +37,132 @@
 .silver {
     background-color: #BDC3C7;
 }
-.cararra{
+
+.cararra {
     background-color: #F2F1EF;
 }
 
 /*ROUGE*/
-.darkred{
+.darkred {
     background-color: #c62828;
 }
-.truered{
+
+.truered {
     background-color: #f44336;
 }
-.pomegrenate{
+
+.pomegrenate {
     background-color: #c0392b;
 }
-.tube{
+
+.tube {
     background-color: #cd201f;
 }
-.red{
+
+.red {
     background-color: #e53935;
 }
-.alizarin{
+
+.alizarin {
     background-color: #e74c3c;
 }
+
+/*Rose*/
+.rosefonc {
+    background-color: #880E4F;
+}
+
+.rose {
+    background-color: #D81B60;
+}
+
+.glamour {
+    background-color: #ff7979;
+}
+
+.clairrose {
+    background-color: #E91E63;
+}
+
+.rosetresclair {
+    background-color: #F06292;
+}
+
+/*Orange*/
+.pumpkin {
+    background-color: #d35400;
+}
+
+.clementine {
+    background-color: #F4511E;
+}
+
+.orange {
+    background-color: #FB8C00;
+}
+
+.lemonade {
+    background-color: #FF9800;
+}
+
+.carrot {
+    background-color: #e67e22;
+}
+
+/*yellow*/
+.sun {background-color: #ffcb05;}
+
+.flashy {background-color: #FFFF00;}
+
+.butter {background-color: #FDD835;}
+
+.clear {background-color: #FFEE58;}
+
+.yellow {background-color: #FFEB3B;}
+
+/* green*/
+.courgette {background-color: #2E7D32;}
+
+.herbe {background-color: #4CAF50;}
+
+.vert {background-color: #7CB342;}
+
+.vertfonc {background-color: #43A047;}
+
+.verre {background-color: #81C784;}
+
+/* turquoise*/
+.turquoisefonc {background-color: #00695C;}
+
+.greensea {background-color: #16a085;}
+
+.turquoise {background-color: #00897B;}
+
+.trueturquoise {background-color: #1abc9c;}
+
+.fresh {background-color: #4DB6AC;}
+
+/*cyan+bleuciel*/
+.ciel {background-color: #0277BD;}
+
+.cyanfonc {background-color: #00ACC1;}
+
+.cyan {background-color: #00BCD4;}
+
+.bleuclair {background-color: #29B6F6;}
+
+.water {background-color: #4FC3F7;}
+
+/*cyan+bleuciel*/
+.tardis {background-color: #1565C0;}
+
+.belize {background-color: #2980b9;}
+
+.river {background-color: #3498db;}
+
+.bleugoodendingtome2 {background-color: #2196F3;}
+
+.bleugris {background-color: #64B5F6;}
 
 .text {
     color: #212121;
@@ -68,3 +172,23 @@
     right: 20px;
     text-transform: uppercase;
 }
+
+.case:hover .clickme{
+    display: inline;position: absolute;
+    font-size: 18px;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+content: "choose me !";
+color: white;
+border: solid 1px white;
+padding: 5px ;
+border-radius: 10px;
+}
+.clickme{
+    display: none;
+    
+}
+ input{
+     font-size: 24px;
+ }
