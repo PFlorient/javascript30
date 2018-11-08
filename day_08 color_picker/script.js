@@ -9,7 +9,13 @@ for (var i = 0; i < color.length; i++) {
             backgroundColor = rgb2hex(backgroundColor);
             copyToClipboard(backgroundColor);
             clickme[index].innerHTML = "Copied !";
-        })
+            color[index].classList.toggle("big");
+            setTimeout(changetext, 800)
+        });
+       function changetext(){
+        color[index].classList.remove("big");
+        clickme[index].innerHTML = "Choose me !";
+        }
     })(i);
 }
 
