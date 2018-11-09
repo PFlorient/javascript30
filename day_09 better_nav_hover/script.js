@@ -6,11 +6,16 @@ document.body.append(surbrillance);
 
 function lien() {
     var coordo = this.getBoundingClientRect();
-    console.log(coordo);
-    surbrillance.style.width = `${coordo.width}px`;
-    surbrillance.style.height = `${coordo.height}px`;
+    var valeur = {
+        width: coordo.width,
+        height : coordo.height,
+        top : coordo.top + window.scrollY,
+        left : coordo.left + window.scrollX
+    }
+    surbrillance.style.width = `${valeur.width}px`;
+    surbrillance.style.height = `${valeur.height}px`;
     surbrillance.style.padding = "5px 10px ";
-    surbrillance.style.transform = `translate(${coordo.left-10}px, ${coordo.top-5}px)`;
+    surbrillance.style.transform = `translate(${valeur.left-10}px, ${valeur.top-5}px)`;
 
 }
 
