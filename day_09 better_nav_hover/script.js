@@ -4,8 +4,12 @@ surbrillance.classList.add('surbrillance');
 
 document.body.append(surbrillance);
 
-function lien(){
-    console.log('ok');
+function lien() {
+    var coordo = this.getBoundingClientRect();
+    console.log(coordo);
+    surbrillance.style.width = `${coordo.width}px`;
+    surbrillance.style.height = `${coordo.height}px`;
+    
 }
 
 link.forEach(a => a.addEventListener('mouseenter', lien));
