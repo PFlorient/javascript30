@@ -21,21 +21,52 @@ img {
 nav {
     background: #212121;
     height: 50px;
+    top: 0;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+    width: 100%;
+}
+
+.fixed nav {
+    position: fixed;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1)
 }
 
 ul {
     text-align: center;
     padding-top: 10px;
+    display: flex;
 }
 
 ul li {
-    display: inline;
-    padding: 5px 10px;
+    list-style: none;
+   
     margin: 0px 20px;
     color: #f2f2f2;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
+}
+
+.logo{
+    max-width: 0;
+    overflow: hidden;
+  
+    transition: all 0.5s;
+  font-size: 30px;
+ 
+}
+
+.logo a {
+    color: #f1f1f1;
+}
+ nav a {
+     text-decoration: none;
+ }
+.fixed .logo{
+    max-width: 500px;
+    font-size: 30px;
 }
 
 .lasuite {
@@ -51,4 +82,5 @@ ul li {
     margin: auto;
     border-radius: 5px;
     padding: 10px 5px;
+    margin-top: 20px;
 }
