@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.fistpage {}
+
+img {
+    height: 80vh;
+    width: 100%;
+    display: block;
+}
+
+nav {
+    background: #212121;
+    height: 50px;
+}
+
+ul {
+    text-align: center;
+    padding-top: 10px;
+}
+
+ul li {
+    display: inline;
+    padding: 5px 10px;
+    margin: 0px 20px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+}
+
+.lasuite {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.lasuite p {
+    width: 80%;
+    height: 100%;
+    border: solid 1px black;
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
