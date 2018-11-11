@@ -25,7 +25,7 @@ function creercellule() {
     }
   }
 }
-
+ 
 function drawCell(cell) {
   ctx.beginPath();
   ctx.rect(cell.x, cell.y, width, width);
@@ -87,7 +87,7 @@ function canvasClean() {
 }
 
 document.onkeydown = function (event) {
-  if (!loss) {
+  if (!lost) {
     if (event.keyCode === 38 || event.keyCode === 87) {
       moveUp();
     } else if (event.keyCode === 39 || event.keyCode === 68) {
@@ -110,7 +110,7 @@ function startGame() {
 
 function finishGame() {
   alert('Game Over')
-  loss = true;
+  lost = true;
 }
 
 function affichercellule() {
