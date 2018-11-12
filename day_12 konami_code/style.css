@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#252525, #d4d4d4)
+}
+
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    background-color: 
+}
