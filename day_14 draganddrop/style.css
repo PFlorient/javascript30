@@ -34,7 +34,10 @@ cursor: pointer;
 .garder{
     border: solid deeppink 4px;
 }
-
+.hovered{
+    background: #f4f4f4;
+    border-style: dashed;
+}
 .invisible{
     display: none;
 }
