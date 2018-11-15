@@ -28,7 +28,7 @@ function dragEnd() {
 }
 
 function dragOver(e){
-    e.preventDefault();
+   e.preventDefault();
 }
 
 function dragEnter(e){
