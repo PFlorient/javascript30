@@ -37,3 +37,6 @@ input[type=submit] {
     background-color: #FFF;
     width: 45px;
 }
+label{    width: 100px;
+    display: inline-block;
+}
