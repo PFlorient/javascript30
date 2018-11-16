@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #2193b0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.zone {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: auto;
+    margin-top: 20%;
+    text-align: center;
+    border: solid black 1px;
+    padding: 25px;
+}
+
+.liste{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: #FFF;
+    width: 45px;
+}
