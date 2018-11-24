@@ -5,9 +5,12 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
+
 section#carousel>figure>img {
     display: none;
     margin: 0px auto;
+    width: 100%;
+    height: 100vh;
 }
 
 section#carousel>figure.visible>img {
