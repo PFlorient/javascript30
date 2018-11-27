@@ -29,12 +29,13 @@ function drawMatrix(matrix, offset) {
 let dropCounter = 0;
 let dropInterval = 1000;
 
-let lastTime =0;
+let lastTime = 0;
+
 function update(time = 0) {
     const deltaTime = time - lastTime;
     lastTime = time;
     dropCounter += deltaTime;
-    if(dropCounter>dropInterval){
+    if (dropCounter > dropInterval) {
         player.pos.y++
         dropCounter = 0;
     }
@@ -49,5 +50,17 @@ const player = {
     matrix: matrix,
 
 }
+
+document.addEventListener('keydown', event => {
+    if (event.keyCode === 37) {
+        player.pos.x--;
+    } else
+    if (event.keyCode === 39) {
+        player.pos.x++;
+    }else if (event.keyCode === 40) {
+        player.pos.y++;
+        dropCounter =0;
+    }
+});
 
 update();
