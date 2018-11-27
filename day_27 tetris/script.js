@@ -110,7 +110,7 @@ function playerDrop() {
     if (collide(arena, player)) {
         player.pos.y--;
         merge(arena, player);
-        player.pos.y = 0;
+        playerReset();
     }
     dropCounter = 0;
 }
@@ -175,7 +175,12 @@ function update(time = 0) {
 
 const arena = createMatrix(12, 20);
 
-
+function playerReset() {
+    const pieces = 'ILJOTSZ';
+    player.matrix = createPiece(pieces[pieces.length * Math.random() | 0])
+    player.pos.y = 0;
+    player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
+}
 
 const player = {
     pos: {
