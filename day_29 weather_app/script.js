@@ -27,6 +27,7 @@ function findWeatherDetails() {
 }
 
 function theResponse(response) {
+    
     let jsonObject = JSON.parse(response);
     cityName.innerHTML = jsonObject.name;
     icon.src = "http://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
@@ -37,11 +38,13 @@ function theResponse(response) {
 
   function httpRequestAsync(url, callback)
 {
-  console.log("work");
+  
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = () => { 
-        if (httpRequest.readyState == 4 && httpRequest.status == 200)
+        if (httpRequest.readyState == 4 && httpRequest.status == 200){
+            console.log("work");
             callback(httpRequest.responseText);
+        }
     }
     httpRequest.open("GET", url, true); // true for asynchronous 
     httpRequest.send();
