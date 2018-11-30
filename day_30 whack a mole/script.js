@@ -1,5 +1,5 @@
 const trous = document.querySelectorAll('.hole');
-const scoreBoard = document.querySelectorAll('.score');
+const scoreBoard = document.querySelector('.score');
 const taupes = document.querySelectorAll('.mole');
 let score = 0;
 
@@ -46,5 +46,4 @@ function bonk(e) {
     score++;
     this.parentNode.classList.remove('up');
     scoreBoard.textContent = score;
-    console.log(score);
   }
