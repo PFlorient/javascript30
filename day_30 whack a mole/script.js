@@ -19,3 +19,9 @@ function randomtrou(trous) {
     derniertrou = trou;
     return trou;
 }
+
+function peep(){
+    const time = randTime(200,1000);
+    const trou = randomtrou(trous);
+    trou.classList.add('up')
+}
